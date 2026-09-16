@@ -5,9 +5,13 @@ body{background:var(--pro-bg);color:var(--pro-text)}
 .btn-primary,.btn-secondary,.btn-danger,.atalho-btn,.atalho-card button,.pro-btn,.acoes-backup button{background:linear-gradient(135deg,var(--pro-blue),var(--pro-blue-dark))!important;color:#fff!important;border:0!important;border-radius:10px!important;min-height:42px;padding:10px 16px!important;font-weight:700!important;box-shadow:0 5px 14px rgba(37,99,235,.18)!important;transition:.18s ease!important}
 .btn-primary:hover,.btn-secondary:hover,.btn-danger:hover,.atalho-btn:hover,.atalho-card button:hover,.pro-btn:hover,.acoes-backup button:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(37,99,235,.25)!important}
 .btn-primary:active,.btn-secondary:active,.btn-danger:active,.atalho-btn:active,.atalho-card button:active,.pro-btn:active{transform:translateY(0)}
-/* FILIAIS E USUÁRIOS: PRETO */
-#page-filiais .btn-primary,#page-filiais button,#page-usuarios .btn-primary,#page-usuarios button{background:#111827!important;color:#fff!important;box-shadow:0 5px 14px rgba(17,24,39,.18)!important}
-#page-filiais .btn-primary:hover,#page-filiais button:hover,#page-usuarios .btn-primary:hover,#page-usuarios button:hover{background:#000!important}
+/* FILIAIS E USUÁRIOS — PRETO: usa os elementos reais, sem depender de IDs de página */
+button[data-tela="filiais"],button[data-tela="usuarios"],button[data-tela="usuários"]{background:#111827!important;color:#fff!important}
+.tela[id*="filial"],.tela[id*="usuario"],.tela[id*="usuari"]{--secao-cor:#111827}
+.tela[id*="filial"] .btn,.tela[id*="filial"] button,.tela[id*="usuario"] .btn,.tela[id*="usuario"] button,.tela[id*="usuari"] .btn,.tela[id*="usuari"] button{background:#111827!important;color:#fff!important;border-color:#111827!important;box-shadow:0 5px 14px rgba(17,24,39,.18)!important}
+.tela[id*="filial"] .btn:hover,.tela[id*="filial"] button:hover,.tela[id*="usuario"] .btn:hover,.tela[id*="usuario"] button:hover,.tela[id*="usuari"] .btn:hover,.tela[id*="usuari"] button:hover{background:#000!important}
+/* classes de seções usadas por versões diferentes do DULEO */
+.filiais-section .btn,.filiais-section button,.usuarios-section .btn,.usuarios-section button,.secao-filiais .btn,.secao-filiais button,.secao-usuarios .btn,.secao-usuarios button{background:#111827!important;color:#fff!important;border-color:#111827!important}
 input,select,textarea{border:1px solid #d7e0ea!important;border-radius:10px!important;min-height:42px;background:#fff!important;color:var(--pro-text)!important}
 table{border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--pro-border);border-radius:14px;background:#fff}th{background:#f8fafc;color:#475569;font-weight:800}td,th{padding:12px 14px;border-bottom:1px solid #edf1f5}.topbar,.page-header{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--pro-border)}
 @media(max-width:700px){.btn-primary,.btn-secondary,.btn-danger,.atalho-btn,.atalho-card button,.pro-btn{width:100%;justify-content:center}.card,.painel,.dashboard-card{border-radius:14px}.acoes-backup{display:grid;grid-template-columns:1fr;gap:10px}}
