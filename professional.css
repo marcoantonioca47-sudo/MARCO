@@ -35,3 +35,4 @@ body{background:linear-gradient(180deg,#f7f9fc 0%,#f2f5f9 100%);color:var(--dule
 @media(max-width:560px){.cards,.cards-3{grid-template-columns:1fr}.painel{padding:16px;border-radius:14px}.card{padding:16px}.geral-resumo strong{font-size:42px!important}.login-page{padding:16px}.login-card{padding:28px 20px;border-radius:20px}.login-logo img{width:235px}.acoes-backup .btn{width:100%}}
 @import url("professional-pro.css");
 @import url("duleo-resumo-graficos.css");
+@import url("layout-profissional-final.css?v=1.1.0");
