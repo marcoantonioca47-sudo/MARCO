@@ -1,0 +1,19 @@
+/* DULEO — acabamento profissional global */
+:root{--pro-blue:#0b5ed7;--pro-blue-2:#084298;--pro-ink:#101828;--pro-muted:#667085;--pro-border:#e4e7ec;--pro-bg:#f6f8fb;--pro-white:#fff;--pro-shadow:0 8px 24px rgba(16,24,40,.07)}
+*{box-sizing:border-box}
+body{background:var(--pro-bg);color:var(--pro-ink)}
+button,.btn,.btn-primary,.btn-secondary,.btn-danger,a[role=button]{border-radius:10px!important;min-height:42px;padding:10px 16px!important;font-weight:700!important;letter-spacing:.1px;transition:transform .16s,box-shadow .16s,background .16s!important}
+.btn-primary,.btn-secondary,.btn-danger{background:linear-gradient(180deg,var(--pro-blue),var(--pro-blue-2))!important;color:#fff!important;border:1px solid var(--pro-blue-2)!important;box-shadow:0 4px 10px rgba(11,94,215,.18)!important}
+button:hover,.btn:hover,.btn-primary:hover,.btn-secondary:hover,.btn-danger:hover,a[role=button]:hover{transform:translateY(-1px)!important;box-shadow:0 7px 16px rgba(16,24,40,.14)!important}
+input,select,textarea{border-radius:10px!important;border:1px solid var(--pro-border)!important;min-height:42px;background:#fff!important}
+.card,.painel,.panel,.dashboard-card,.grafico-painel{border:1px solid var(--pro-border)!important;border-radius:16px!important;background:#fff!important;box-shadow:var(--pro-shadow)!important}
+.card h3,.painel h3,.panel h3{font-weight:800!important;color:var(--pro-ink)}
+/* Filiais e Usuários em preto */
+#btnFiliais,.btn-filiais,[data-page="filiais"],a[href*="filiais"],button[onclick*="filiais"],#btnUsuarios,.btn-usuarios,[data-page="usuarios"],a[href*="usuarios"],button[onclick*="usuarios"]{background:#111827!important;color:#fff!important;border-color:#111827!important}
+/* atalhos com o mesmo padrão do Novo indicador */
+.atalho,.atalho-btn,.atalhos button,.quick-action,.shortcut-btn,.pro-atalho{background:linear-gradient(180deg,var(--pro-blue),var(--pro-blue-2))!important;color:#fff!important;border:1px solid var(--pro-blue-2)!important;box-shadow:0 4px 10px rgba(11,94,215,.18)!important;border-radius:10px!important;min-height:42px!important;padding:10px 16px!important;font-weight:700!important}
+.atalhos,.atalhos-grid,.quick-actions,.pro-atalhos{gap:10px!important}
+@media(max-width:700px){.atalhos,.atalhos-grid,.quick-actions,.pro-atalhos{grid-template-columns:1fr!important}.atalho,.atalho-btn,.atalhos button,.quick-action,.shortcut-btn,.pro-atalho{width:100%!important}.card,.painel,.panel{border-radius:14px!important}}
+/* resumo operacional */
+#resumoOperacional,.resumo-operacional{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px!important}
+@media(max-width:700px){#resumoOperacional,.resumo-operacional{grid-template-columns:1fr!important}}
