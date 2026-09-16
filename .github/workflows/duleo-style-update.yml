@@ -1,0 +1,91 @@
+name: DULEO Style Update
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-style:
+    if: ${{ !contains(github.event.head_commit.message, '[duleo-style]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v4
+
+      - name: Aplicar refinamento visual
+        run: |
+          cat >> style.css <<'EOF'
+
+/* =========================================================
+   DULEO - REFINAMENTO VISUAL FINAL
+========================================================= */
+
+.card,
+.painel {
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .09);
+    border-color: #d7e3f0;
+}
+
+.painel:hover {
+    box-shadow: 0 10px 26px rgba(15, 23, 42, .08);
+}
+
+.menu-item {
+    transition: background .2s ease, color .2s ease, transform .15s ease;
+}
+
+.menu-item:hover {
+    transform: translateX(2px);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+    box-shadow: 0 7px 18px rgba(15, 23, 42, .10);
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        padding: 20px 16px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .cards,
+    .cards-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-cabecalho,
+    .painel-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+EOF
+
+      - name: Salvar alteração no GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add style.css
+          git commit -m "Aplicar refinamento visual DULEO [duleo-style]"
+          git push
