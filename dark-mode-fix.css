@@ -1,0 +1,48 @@
+/* DULEO - correção completa de textos no tema escuro */
+body.dark{color:#fff}
+body.dark .main,
+body.dark .main h1,
+body.dark .main h2,
+body.dark .main h3,
+body.dark .main h4,
+body.dark .main p,
+body.dark .main span,
+body.dark .main b,
+body.dark .main label,
+body.dark .main td,
+body.dark .main th,
+body.dark .main .bar-value,
+body.dark .main .bar-label,
+body.dark .main .recent-item,
+body.dark .main .activity,
+body.dark .main .summary-box,
+body.dark .main .panel-head p,
+body.dark .main .kpi span{color:#fff}
+body.dark .main .eyebrow{color:#60a5fa}
+body.dark .main .top-user{color:#cbd5e1}
+body.dark .main .link-btn{color:#60a5fa}
+body.dark .main .muted,
+body.dark .main [class*="muted"]{color:#cbd5e1}
+body.dark .main input,
+body.dark .main select,
+body.dark .main textarea{color:#fff;background:#0b1120;border-color:#334155}
+body.dark .main input::placeholder{color:#94a3b8}
+body.dark .main .btn.secondary,
+body.dark .main .mini{color:#fff;background:#263244}
+body.dark .main .btn.dark{color:#fff;background:#020617}
+body.dark .main th{background:#172033;color:#fff}
+body.dark .main .ai-history{color:#fff}
+body.dark .main .ai-msg.bot{color:#dbeafe}
+body.dark .main .ai-msg.user{color:#fff}
+body.dark .main .branch-badge{color:#bfdbfe}
+body.dark .main .badge.green{color:#86efac}
+body.dark .main .badge.yellow{color:#fde68a}
+body.dark .main .badge.red{color:#fca5a5}
+body.dark .main .account-panel{border-color:#7f1d1d}
+body.dark .main .logout-settings{color:#fff;background:#dc2626}
+body.dark .login-box h1,
+body.dark .login-box p,
+body.dark .login-box label{color:#fff}
+body.dark .login-box input,
+body.dark .login-box select{color:#fff;background:#0b1120;border-color:#334155}
+body.dark .login-box input::placeholder{color:#94a3b8}
