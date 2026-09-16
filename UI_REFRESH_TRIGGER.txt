@@ -1,0 +1,1 @@
+Atualização visual do Resumo Operacional: gráficos de barras HTML/CSS e cache versionado.
