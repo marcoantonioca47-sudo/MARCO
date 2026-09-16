@@ -1,0 +1,58 @@
+/* DULEO — FORMATAÇÃO FINAL DOS NOVOS COMPONENTES */
+
+/* Área executiva */
+.pro-shell{margin:0 0 24px;gap:20px}
+.pro-toolbar{background:linear-gradient(180deg,#fff,#f8fafc);border:1px solid #e1e8f0;border-radius:16px;padding:14px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+.pro-toolbar:before{content:'CONTROLE RÁPIDO';display:block;width:100%;font-size:9px;font-weight:900;letter-spacing:1.4px;color:#1557a6;margin:0 2px 2px}
+.pro-search{height:44px;border-radius:12px;font-size:13px;font-weight:600;color:#172033;background:#f8fafc;border:1px solid #dce5ef;padding:0 15px}
+.pro-search::placeholder{color:#94a3b8}
+.pro-chip{min-height:34px;padding:8px 13px;border-radius:10px;font-size:10px;letter-spacing:.02em;background:#f8fafc;box-shadow:0 2px 6px rgba(15,23,42,.03)}
+.pro-chip.ok{background:#ecfdf3;color:#137a45;border-color:#c9ead7}
+.pro-chip.warn{background:#fff8e7;color:#9a6400;border-color:#f0dda9}
+.pro-chip.bad{background:#fff1f2;color:#b4232d;border-color:#f2c8cc}
+
+/* KPIs */
+.pro-kpis{gap:16px;margin:2px 0 4px}
+.pro-kpi{position:relative;min-height:108px;padding:18px 18px 16px;border-radius:16px;border:1px solid #e2e8f0;background:linear-gradient(145deg,#fff 0%,#f8fbff 100%);box-shadow:0 8px 24px rgba(15,23,42,.06);overflow:hidden}
+.pro-kpi:after{content:'';position:absolute;right:-22px;top:-25px;width:82px;height:82px;border-radius:50%;background:rgba(21,87,166,.055)}
+.pro-kpi small{position:relative;z-index:1;font-size:9px;letter-spacing:1px;color:#64748b}
+.pro-kpi strong{position:relative;z-index:1;font-size:28px;line-height:1.1;color:#172033;margin-top:9px}
+.pro-kpi span{position:relative;z-index:1;font-size:10px;color:#94a3b8;margin-top:7px}
+
+/* Painéis executivos */
+.pro-grid-2{gap:18px}
+.pro-row{min-height:48px;padding:12px 14px;border-radius:11px;border:1px solid #e7edf4;background:#fbfcfe;transition:.18s ease}
+.pro-row:hover{background:#f4f8fd;border-color:#d5e1ee;transform:translateX(2px)}
+.pro-row strong{font-size:12px;color:#1e293b}
+.pro-row span{font-size:10px;color:#64748b}
+
+/* Modal / comandos */
+.pro-modal-backdrop{background:rgba(8,24,48,.55)}
+.pro-modal{border-radius:20px;border:1px solid rgba(255,255,255,.7);box-shadow:0 35px 90px rgba(15,23,42,.28)}
+.pro-modal-head{padding:17px 20px;background:#f8fafc}
+.pro-modal-head strong{font-size:14px;color:#172033}
+.pro-modal-body{padding:18px 20px}
+.pro-command{padding:13px 14px;border-radius:11px;font-size:12px;color:#243247;transition:.16s ease}
+.pro-command:hover{transform:translateX(2px);background:#f5f9ff;border-color:#c8dbef}
+
+/* Botão flutuante e toast */
+.pro-fab{width:50px;height:50px;right:24px;bottom:24px;border:3px solid rgba(255,255,255,.8);box-shadow:0 12px 30px rgba(11,55,109,.28);transition:transform .2s ease,box-shadow .2s ease}
+.pro-fab:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 36px rgba(11,55,109,.34)}
+.pro-toast{border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);font-size:11px;letter-spacing:.01em}
+
+/* Busca rápida / ferramentas inseridas */
+.busca-rapida,.versao-sistema{font-weight:700}
+
+/* Títulos e blocos novos */
+.pro-shell h3,.pro-shell h4{color:#172033;letter-spacing:-.02em}
+.pro-shell small{line-height:1.4}
+
+/* Ajuste mobile */
+@media(max-width:700px){
+ .pro-shell{gap:14px;margin-bottom:18px}
+ .pro-kpis{gap:10px}
+ .pro-kpi{min-height:96px;padding:15px}
+ .pro-kpi strong{font-size:24px}
+ .pro-toolbar:before{font-size:8px}
+ .pro-fab{right:15px;bottom:15px}
+}
