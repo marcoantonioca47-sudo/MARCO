@@ -1,4 +1,4 @@
-/* DULEO FINAL UI — botões e acessos recentes */
+/* DULEO FINAL UI — botões, auditoria e gráfico operacional */
 .pro-toolbar{display:grid!important;grid-template-columns:minmax(0,1fr) repeat(3,auto) auto!important;gap:10px!important;align-items:center!important;padding:12px!important}
 .pro-toolbar .pro-chip:not(#proStatus){height:44px!important;min-height:44px!important;padding:0 17px!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#1d6bc7,#1557a6)!important;color:#fff!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:13px!important;font-weight:800!important;box-shadow:0 7px 18px rgba(21,87,166,.18)!important;white-space:nowrap!important;cursor:pointer!important}
 .pro-toolbar .pro-chip:not(#proStatus):hover{transform:translateY(-2px)!important;box-shadow:0 11px 24px rgba(21,87,166,.25)!important}
@@ -18,6 +18,23 @@
 .pro-activity-row strong{color:#fff!important;font-size:13px!important;line-height:1.3!important}
 .pro-activity-row span{color:#9fb0c7!important;font-size:11px!important;line-height:1.3!important}
 .pro-activity-row time{color:#9fb0c7!important;font-size:11px!important;white-space:nowrap!important}
+
+/* =========================================================
+   RESUMO OPERACIONAL — BARRAS HTML/CSS
+   Não utiliza imagem. As barras recebem os valores do JS.
+========================================================= */
+.pro-executive .pro-chart-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important;margin-top:18px!important}
+.pro-executive .pro-chart-card{position:relative!important;display:grid!important;grid-template-columns:150px minmax(60px,90px) minmax(0,1fr)!important;grid-template-areas:'label value bar'!important;align-items:center!important;gap:14px!important;min-height:68px!important;padding:12px 14px!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:13px!important;background:rgba(255,255,255,.045)!important;box-shadow:none!important;overflow:hidden!important}
+.pro-executive .pro-chart-icon{display:none!important}
+.pro-executive .pro-chart-info{display:contents!important}
+.pro-executive .pro-chart-info span{grid-area:label!important;color:#f8fafc!important;font-size:12px!important;font-weight:750!important}
+.pro-executive .pro-chart-info strong{grid-area:value!important;color:#fff!important;font-size:22px!important;line-height:1!important;font-variant-numeric:tabular-nums!important;text-align:right!important}
+.pro-executive .pro-chart-info small{display:none!important}
+.pro-executive .pro-meter{grid-area:bar!important;width:100%!important;height:13px!important;border-radius:999px!important;background:rgba(255,255,255,.09)!important;overflow:hidden!important;border:1px solid rgba(255,255,255,.04)!important}
+.pro-executive .pro-meter i{display:block!important;height:100%!important;border-radius:999px!important;background:linear-gradient(90deg,#1766bd,#5da7ef)!important;box-shadow:0 3px 10px rgba(21,87,166,.22)!important;transition:width .65s cubic-bezier(.2,.7,.2,1)!important}
+.pro-executive .pro-chart-card:hover{border-color:rgba(93,167,239,.28)!important;background:rgba(255,255,255,.06)!important;transform:none!important}
+.pro-executive .pro-chart-grid:before{content:'Indicadores operacionais';display:block;color:#9fb0c7;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:2px 0 0}
+
 @media(max-width:700px){
  .pro-toolbar{grid-template-columns:1fr 1fr 1fr!important;gap:8px!important}
  .pro-toolbar .pro-search{grid-column:1/-1!important}
@@ -28,6 +45,9 @@
  .pro-executive #proExportCsv{width:100%!important}
  .pro-executive .pro-kpis{grid-template-columns:1fr 1fr!important}
  .pro-executive .pro-kpi{min-height:100px!important}
+ .pro-executive .pro-chart-card{grid-template-columns:minmax(110px,1fr) 55px!important;grid-template-areas:'label value' 'bar bar'!important;gap:8px 12px!important;padding:13px!important}
+ .pro-executive .pro-chart-info strong{text-align:right!important;font-size:20px!important}
+ .pro-executive .pro-meter{height:11px!important}
  .pro-report-activity{padding:18px!important}
  .pro-activity-row{align-items:flex-start!important;flex-direction:column!important;gap:6px!important}
  .pro-activity-row time{white-space:normal!important}
