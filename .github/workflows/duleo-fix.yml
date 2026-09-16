@@ -1,0 +1,53 @@
+name: DULEO Fix Visual
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  visual:
+    if: ${{ !contains(github.event.head_commit.message, '[duleo-style]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Aplicar melhorias visuais
+        shell: bash
+        run: |
+          cat >> style.css <<'EOF'
+
+/* DULEO - CORREÇÃO VISUAL */
+.card, .painel, .indicador-card, .kpi-card, .metrica-card, .grafico-painel, .dashboard-card {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card:hover, .indicador-card:hover, .kpi-card:hover, .metrica-card:hover, .grafico-painel:hover, .dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15,23,42,.10);
+}
+.painel:hover { box-shadow: 0 10px 26px rgba(15,23,42,.08); }
+.progresso, .barra-progresso, .progress, .mini-progresso { overflow: hidden; border-radius: 999px; }
+.progresso > *, .barra-progresso > *, .progress > *, .mini-progresso > * { transition: width .5s ease; }
+@media (max-width: 900px) {
+  .main-content { padding: 20px 16px; }
+  .cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .cards, .cards-3 { grid-template-columns: 1fr; }
+  .pagina-cabecalho, .painel-cabecalho { align-items: flex-start; flex-direction: column; }
+}
+EOF
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add style.css
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração necessária."
+            exit 0
+          fi
+          git commit -m "Aplicar correção visual DULEO [duleo-style]"
+          git push
