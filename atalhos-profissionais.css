@@ -1,0 +1,74 @@
+/* DULEO — ATALHOS COM O MESMO PADRÃO DO BOTÃO + NOVO INDICADOR */
+.pro-modal .pro-command-list{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:12px!important;
+  padding:4px!important;
+}
+
+.pro-modal .pro-command{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  width:100%!important;
+  min-height:46px!important;
+  padding:11px 16px!important;
+  border:0!important;
+  border-radius:10px!important;
+  background:linear-gradient(135deg,#1761b5,#124b91)!important;
+  color:#fff!important;
+  font-family:inherit!important;
+  font-size:13px!important;
+  font-weight:750!important;
+  line-height:1.2!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  cursor:pointer!important;
+  box-shadow:0 7px 18px rgba(21,87,166,.20)!important;
+  transition:transform .15s ease,box-shadow .2s ease,background .2s ease!important;
+}
+
+.pro-modal .pro-command:hover,
+.pro-modal .pro-command:focus-visible{
+  background:linear-gradient(135deg,#124f9a,#0b376d)!important;
+  box-shadow:0 10px 22px rgba(21,87,166,.24)!important;
+  transform:translateY(-1px)!important;
+  outline:none!important;
+}
+
+.pro-modal .pro-command:active{
+  transform:translateY(0)!important;
+  box-shadow:0 5px 12px rgba(21,87,166,.18)!important;
+}
+
+.pro-modal .pro-command span{
+  color:#fff!important;
+  font-size:13px!important;
+  font-weight:750!important;
+}
+
+.pro-modal .pro-modal-close{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  width:36px!important;
+  height:36px!important;
+  border:0!important;
+  border-radius:10px!important;
+  background:linear-gradient(135deg,#1761b5,#124b91)!important;
+  color:#fff!important;
+  font-size:20px!important;
+  font-weight:700!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  cursor:pointer!important;
+  box-shadow:0 5px 14px rgba(21,87,166,.18)!important;
+}
+
+.pro-modal .pro-modal-close:hover{background:linear-gradient(135deg,#124f9a,#0b376d)!important;transform:translateY(-1px)!important}
+
+@media(max-width:560px){
+  .pro-modal .pro-command-list{grid-template-columns:1fr!important;gap:10px!important;padding:2px!important}
+  .pro-modal .pro-command{min-height:46px!important;font-size:13px!important}
+}
