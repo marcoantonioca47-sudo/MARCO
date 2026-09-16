@@ -1,0 +1,15 @@
+/* DULEO — visual do gráfico de barras do Resumo Operacional */
+.pro-resumo-barras{margin-top:20px;padding:20px;border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.045)}
+.pro-resumo-barras-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:22px}
+.pro-resumo-barras-head h4{margin:6px 0 4px;color:#fff;font-size:17px;letter-spacing:-.2px}
+.pro-resumo-barras-head p{margin:0;color:#9fb0c7;font-size:11px}
+.pro-chart-badge{flex:0 0 auto;padding:7px 10px;border:1px solid rgba(93,167,239,.25);border-radius:999px;background:rgba(21,87,166,.16);color:#78b9f4;font-size:9px;font-weight:800;letter-spacing:.08em}
+.pro-bars{display:grid;gap:17px}
+.pro-bar-row{min-width:0}
+.pro-bar-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:7px}
+.pro-bar-label strong{color:#f8fafc;font-size:12px;font-weight:750}
+.pro-bar-label span{color:#fff;font-size:14px;font-weight:850;font-variant-numeric:tabular-nums}
+.pro-bar-track{height:11px;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+.pro-bar-track i{display:block;height:100%;min-width:0;border-radius:999px;background:linear-gradient(90deg,#1766bd,#5da7ef);box-shadow:0 3px 10px rgba(21,87,166,.25);transition:width .65s cubic-bezier(.2,.7,.2,1)}
+.pro-bar-row small{display:block;margin-top:5px;color:#73849c;font-size:9px}
+@media(max-width:560px){.pro-resumo-barras{padding:16px}.pro-resumo-barras-head{display:block}.pro-chart-badge{display:inline-flex;margin-top:10px}.pro-bar-label strong{font-size:11px}.pro-bar-label span{font-size:13px}.pro-bars{gap:15px}}
