@@ -58,6 +58,90 @@ jobs:
     box-shadow: 0 7px 18px rgba(15, 23, 42, .10);
 }
 
+/* Indicadores e gráficos */
+.indicador-card,
+.indicador,
+.kpi-card,
+.metrica-card,
+.grafico-painel,
+.dashboard-card {
+    border-radius: 18px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.indicador-card:hover,
+.indicador:hover,
+.kpi-card:hover,
+.metrica-card:hover,
+.grafico-painel:hover,
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, .10);
+}
+
+.progresso,
+.barra-progresso,
+.progress,
+.mini-progresso {
+    overflow: hidden;
+    border-radius: 999px;
+}
+
+.progresso > *,
+.barra-progresso > *,
+.progress > *,
+.mini-progresso > * {
+    transition: width .5s ease;
+}
+
+.grafico-painel {
+    position: relative;
+    overflow: hidden;
+}
+
+.grafico-painel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,.16), transparent 42%);
+}
+
+.grafico-badge,
+.selo-atualizacao {
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: 6px 10px;
+}
+
+.estado-vazio {
+    min-height: 180px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    opacity: .75;
+}
+
+.dashboard-graficos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.grafico-mensal {
+    min-height: 280px;
+}
+
+.busca-rapida {
+    border-radius: 12px;
+}
+
+.versao-sistema {
+    opacity: .7;
+    font-size: .78rem;
+}
+
 @media (max-width: 900px) {
     .main-content {
         padding: 20px 16px;
@@ -65,6 +149,10 @@ jobs:
 
     .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-graficos-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -79,6 +167,10 @@ jobs:
         align-items: flex-start;
         flex-direction: column;
     }
+
+    .dashboard-graficos-grid {
+        gap: 12px;
+    }
 }
 EOF
 
@@ -87,5 +179,9 @@ EOF
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add style.css
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração de estilo necessária."
+            exit 0
+          fi
           git commit -m "Aplicar refinamento visual DULEO [duleo-style]"
           git push
