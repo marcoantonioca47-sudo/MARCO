@@ -1,0 +1,13 @@
+/* DULEO — LAYOUT PROFISSIONAL FINAL */
+:root{--pro-blue:#2563eb;--pro-blue-dark:#1d4ed8;--pro-bg:#f4f7fb;--pro-card:#fff;--pro-text:#172033;--pro-muted:#64748b;--pro-border:#e2e8f0;--pro-radius:16px;--pro-shadow:0 8px 24px rgba(15,23,42,.07)}
+body{background:var(--pro-bg);color:var(--pro-text)}
+.card,.painel,.dashboard-card,.kpi-card,.indicador-card,.metrica-card,.grafico-painel{border:1px solid var(--pro-border);border-radius:var(--pro-radius);box-shadow:var(--pro-shadow);background:var(--pro-card)}
+.btn-primary,.btn-secondary,.btn-danger,.atalho-btn,.atalho-card button,.pro-btn,.acoes-backup button{background:linear-gradient(135deg,var(--pro-blue),var(--pro-blue-dark))!important;color:#fff!important;border:0!important;border-radius:10px!important;min-height:42px;padding:10px 16px!important;font-weight:700!important;box-shadow:0 5px 14px rgba(37,99,235,.18)!important;transition:.18s ease!important}
+.btn-primary:hover,.btn-secondary:hover,.btn-danger:hover,.atalho-btn:hover,.atalho-card button:hover,.pro-btn:hover,.acoes-backup button:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(37,99,235,.25)!important}
+.btn-primary:active,.btn-secondary:active,.btn-danger:active,.atalho-btn:active,.atalho-card button:active,.pro-btn:active{transform:translateY(0)}
+/* FILIAIS E USUÁRIOS: PRETO */
+#page-filiais .btn-primary,#page-filiais button,#page-usuarios .btn-primary,#page-usuarios button{background:#111827!important;color:#fff!important;box-shadow:0 5px 14px rgba(17,24,39,.18)!important}
+#page-filiais .btn-primary:hover,#page-filiais button:hover,#page-usuarios .btn-primary:hover,#page-usuarios button:hover{background:#000!important}
+input,select,textarea{border:1px solid #d7e0ea!important;border-radius:10px!important;min-height:42px;background:#fff!important;color:var(--pro-text)!important}
+table{border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--pro-border);border-radius:14px;background:#fff}th{background:#f8fafc;color:#475569;font-weight:800}td,th{padding:12px 14px;border-bottom:1px solid #edf1f5}.topbar,.page-header{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--pro-border)}
+@media(max-width:700px){.btn-primary,.btn-secondary,.btn-danger,.atalho-btn,.atalho-card button,.pro-btn{width:100%;justify-content:center}.card,.painel,.dashboard-card{border-radius:14px}.acoes-backup{display:grid;grid-template-columns:1fr;gap:10px}}
