@@ -1,0 +1,55 @@
+/* DULEO — ACABAMENTO VISUAL PROFISSIONAL */
+:root{--pf-primary:#1557a6;--pf-dark:#0b376d;--pf-surface:#fff;--pf-soft:#f6f9fd;--pf-border:#e4eaf2;--pf-text:#172033;--pf-muted:#64748b;--pf-green:#16834b;--pf-orange:#c98400;--pf-red:#c92b35;--pf-shadow:0 12px 32px rgba(15,23,42,.08)}
+
+/* Barras e ferramentas adicionadas pelo modo PRO */
+.pro-shell{gap:20px!important}
+.pro-toolbar{align-items:stretch!important;padding:14px!important;border-radius:16px!important;background:linear-gradient(135deg,#fff,#f8fbff)!important;border:1px solid #dfe7f1!important;box-shadow:0 8px 24px rgba(15,23,42,.06)!important}
+.pro-toolbar:before{content:"DULEO PRO";display:flex;align-items:center;padding:0 12px;border-radius:10px;background:linear-gradient(135deg,var(--pf-primary),var(--pf-dark));color:#fff;font-size:10px;font-weight:900;letter-spacing:1px}
+.pro-search{height:44px!important;font-size:13px!important;color:var(--pf-text)!important;background:#fff!important;border:1px solid #d9e2ed!important;box-shadow:inset 0 1px 2px rgba(15,23,42,.03)!important}
+.pro-search::placeholder{color:#94a3b8}
+.pro-chip{height:36px!important;display:inline-flex;align-items:center;gap:5px;padding:0 12px!important;background:#fff!important;border-color:#dfe7f1!important;box-shadow:0 3px 10px rgba(15,23,42,.04);transition:.18s!important}
+.pro-chip:hover{transform:translateY(-1px);border-color:#bfd0e4!important}
+.pro-chip.ok{background:#effaf4!important}.pro-chip.warn{background:#fff9eb!important}.pro-chip.bad{background:#fff2f3!important}
+
+/* KPIs */
+.pro-kpis{gap:15px!important}
+.pro-kpi{position:relative;overflow:hidden;min-height:104px!important;padding:17px 18px!important;border-radius:16px!important;background:linear-gradient(145deg,#fff,#f9fbfe)!important;box-shadow:0 8px 24px rgba(15,23,42,.06)!important;transition:.2s}
+.pro-kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--pf-primary),#6ea4dc)}
+.pro-kpi:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(15,23,42,.10)!important}
+.pro-kpi small{font-size:9px!important;letter-spacing:.1em!important;color:#7b8798!important}
+.pro-kpi strong{font-size:28px!important;line-height:1.05;color:var(--pf-text)!important}
+.pro-kpi span{font-size:10px!important;color:#8b98a8!important}
+
+/* Painéis executivos */
+.pro-grid-2{gap:18px!important}
+.pro-grid-2>.pro-shell,.pro-grid-2>div{min-width:0}
+.pro-list{gap:9px!important}
+.pro-row{min-height:52px;padding:12px 14px!important;border-radius:12px!important;background:linear-gradient(90deg,#fff,#fafcff)!important;border-color:#e8edf3!important;transition:.18s!important}
+.pro-row:hover{transform:translateX(2px);border-color:#cddceb!important;box-shadow:0 5px 15px rgba(15,23,42,.05)}
+.pro-row strong{font-size:12px!important;color:#263247!important}.pro-row span{font-size:10px!important}
+
+/* Modal / central de comandos */
+.pro-modal-backdrop{background:rgba(8,20,38,.58)!important}
+.pro-modal{border-radius:20px!important;box-shadow:0 30px 90px rgba(5,18,35,.30)!important;overflow:hidden}
+.pro-modal-head{padding:18px 22px!important;background:linear-gradient(135deg,#f8fbff,#fff)!important}
+.pro-modal-head h3{font-size:16px!important;color:var(--pf-text)!important}
+.pro-modal-body{padding:22px!important}
+.pro-command{padding:13px 15px!important;border-radius:11px!important;display:flex;align-items:center;justify-content:space-between;font-size:12px!important;color:#25334a!important;transition:.18s!important}
+.pro-command:hover{transform:translateX(2px);background:#f5f9ff!important;border-color:#c8d9eb!important;box-shadow:0 5px 14px rgba(21,87,166,.06)}
+
+/* Botão flutuante */
+.pro-fab{width:52px!important;height:52px!important;right:24px!important;bottom:24px!important;border:3px solid rgba(255,255,255,.9)!important;background:linear-gradient(145deg,#1764bd,#0b376d)!important;box-shadow:0 12px 30px rgba(11,55,109,.32)!important;transition:.2s!important}
+.pro-fab:hover{transform:translateY(-3px) scale(1.03)}
+
+/* Toast */
+.pro-toast{border:1px solid rgba(255,255,255,.12)!important;background:linear-gradient(135deg,#172033,#263550)!important;border-radius:13px!important;padding:13px 16px!important;box-shadow:0 16px 38px rgba(15,23,42,.24)!important}
+
+/* Barra de busca rápida */
+.busca-rapida{border-radius:12px!important;border:1px solid #dce5ef!important;background:#fff!important;box-shadow:0 6px 18px rgba(15,23,42,.05)!important}
+
+/* Versão / selos */
+.versao-sistema{font-weight:800!important;letter-spacing:.12em!important}
+.selo-atualizacao{padding:6px 10px!important;background:#eff6ff!important;color:var(--pf-primary)!important;border:1px solid #d7e7fa!important}
+
+/* Mobile */
+@media(max-width:700px){.pro-toolbar{display:grid!important;grid-template-columns:1fr!important}.pro-toolbar:before{min-height:32px;justify-content:center}.pro-search{width:100%!important}.pro-chip{justify-content:center}.pro-kpi{min-height:94px!important}.pro-fab{right:15px!important;bottom:15px!important}}
